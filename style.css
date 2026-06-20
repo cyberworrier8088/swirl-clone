@@ -182,3 +182,11 @@ footer {
     text-decoration: underline;
     font-weight: bold;
 }
+
+
+
+.card img {
+    width: 25%;
+    border-radius: 12px;
+    object-fit: cover;
+}
