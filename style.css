@@ -1,26 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     background-image: url("assets/BG.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    animation: fadeIn 0.8s ease;
+}
+
+/* smooth fade-in effect. this is good for more smooth :) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-.flag {
-    position: absolute;
-    top: -5px;
-    left: 10px;
-    border: 0;
-    width: 156px;
-    z-index: 999;
-}
-
-.flag:hover {
-    animation: waving 0.5s linear infinite alternate;
-}
 
 @keyframes waving {
     from {
@@ -45,4 +51,97 @@ body {
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(68, 66, 66);
+    padding: 12px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgb(0, 255, 255);
+}
+
+
+.flag {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    border: 0;
+    width: 156px;
+    z-index: 9999;
+}
+
+.flag:hover {
+    animation: waving 0.5s linear infinite alternate;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    font-size: 50px;
+    color: rgb(68, 66, 66);
+}
+
+h3 {
+    font-size: 14px;
+    color: rgb(68, 66, 66);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.btn {
+    padding: 16px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #00e5ff, #7b2cff);
+    color: white;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.4);
+}
+
+.hero-text {
+    background: linear-gradient(90deg, #00e5ff, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: rgb(15, 15, 15);
+    font-size: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
